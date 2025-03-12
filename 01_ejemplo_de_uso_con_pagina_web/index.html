@@ -1,0 +1,42 @@
+<!--el HTML es el que lanza todo, llama a las demas tecnologias para que funcionen-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS en el navegador</title>
+    <style>
+        /* CSS embedded en HTML */
+    </style>
+</head>
+<body>
+
+    <script>
+        //JS embedded en HTML
+        //numero = 1; texto="hola"; //asi se pueden crear variables, no recomendado
+        //tipado dinamico
+        var numero = 1;     //la variable es global
+        let texto ="hola";  //variable local, tiene scope(alcance) la variable solo vive donde la declares, se pueden reusar nombres
+        const PI = 3.1416;   //constante, cuando sepamos que ese dato no va a cambiar, por convenio nombre en mayus
+        // PI = 6.38;          //no se queja porque es .html pero provocaria un error, PI es constante
+        // console.log(typeof(numero));   //typeof() = type() en py, aqui typeof() metodo(funcion) del sistema
+        // console.log(PI)     //para mostrar algo por consola
+        //TIPO NUMERO para int i float
+        // console.log(typeof texto);   //aqui typeof operador especial que sirve para decir el tipo
+        //funciones de ventana ( que abren una ventana)
+
+        // alert("Soy un alert") //abre una ventana que abre una ventana con un boton para aceptar
+        // let diaSemana = prompt("Que dia es hoy?");  //para preguntarle algo al usuario
+        // alert("me has dicho "+ diaSemana);   //concatenacion igual que en python
+        /*
+        alert(`Me has dicho ${diaSemana}`);   //equivale a f""
+        */
+        // let respuesta = confirm("Está lloviendo?");  //respuesta SI/NO
+        // alert(respuesta);
+        //booleanos: true / false MINUSCULA
+        
+        //js en html muy raro, normalmente en otro archivo como css
+
+    </script>   
+</body>
+</html>
