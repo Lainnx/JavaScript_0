@@ -49,19 +49,19 @@ console.log(frase.split(" "));
 let array = []  //array vacía
 let nombre = "mAriA de LaS mercedeDes y dE TOdaS lAs SantAS"
 //paso 1: convertir todo en minusculas
-nombre=nombre.toLocaleLowerCase()
+nombre=nombre.toLocaleLowerCase()   //pasar todo a minuscula
 
 //paso 2: obtener las palabras
-nombre = nombre.split(" ")
-let nombreCorregido = ""
+nombre = nombre.split(" ")          //crea lista con palabras
+let nombreCorregido = ""            //inicia var para nombre corregido
 
-for (palabra of nombre){
-    if(palabra != "de" &&palabra!="las"&&palabra!="y"&&palabra!="los"){
-        let inicial = palabra.at(0).toLocaleUpperCase()
-        let restoNombre = palabra.slice(1)
-        palabra = inicial + restoNombre
+for (palabra of nombre){    //itera sobre lista de palabras
+    if(palabra != "de" &&palabra!="las"&&palabra!="y"&&palabra!="los"){ //si la palabra no es un articulo (articulos van todo minuscula)
+        let inicial = palabra.at(0).toLocaleUpperCase()                 //inicial = palabra[0] en mayus
+        let restoNombre = palabra.slice(1)                              //resto nombre slice de la palabra menos la 1a letra
+        palabra = inicial + restoNombre         //palabra con 1a mayus resto minus
     }
 
-    nombreCorregido += palabra + " "
+    nombreCorregido += palabra + " "    //palabra al estar fuera del if se añadirá despues de operar sobre la palabra, si no hace falta operar las añade directamente(ya estan en minus)
 }
 nombreCorregido
