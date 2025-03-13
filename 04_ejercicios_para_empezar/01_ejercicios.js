@@ -2,14 +2,20 @@
 // Hay que mostrar un mensaje indicando cuantas veces apareceesa letra
 //Por ejemplo: La letra "a" aparece 2 veces en la palabra "Marta"
 
-let palabra = "Marta"
-let letra = "a"
+const palabra = "Marta"
+const letra = "a"
 let contador = 0
+let palabraMinus = palabra.toLocaleLowerCase()
+let contador2 = 0
+
 for (let i=0;i<palabra.length;i++){
-    if(palabra[i]==letra){
+    if(palabraMinus[i]==letra){
         contador++
+        
     }
+    console.log(palabra[i].toLocaleLowerCase());
 }
+
 if(contador == 0){
     console.log(`La letra "${letra}" no aparece ninguna vez en la palabra "${palabra}"`);
 }else if(contador == 1){
@@ -17,8 +23,17 @@ if(contador == 0){
 }else{
     console.log(`La letra "${letra}" aparece ${contador} veces en la palabra "${palabra}"`);
 }
-for(letra of palabra){
-    console.log(letra);
+
+for(char of palabra){
+    console.log(char);
+}
+
+for (caracter of palabra){
+    caracter = caracter.toLocaleLowerCase()
+    console.log(caracter);
+    if(caracter==letra){
+        contador2++
+    }
 }
 
 //

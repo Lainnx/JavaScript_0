@@ -65,3 +65,5 @@ console.log(frutas);
 //reverse() ->  toReversed()
 //sort()    ->  toSorted()
 //MODIFICA  ->  NO MODIFICA(HAY QUE ASIGNAR)
+
+//if array.lenght == 0 -> esta VACÍA, aqui no como py
