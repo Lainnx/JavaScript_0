@@ -95,7 +95,7 @@
         }
 
         const nb = document.querySelectorAll(".newBackground")  //aqui selectores de CSS
-        for(let i=0;i<parrafos.length;i++){
+        for(let i=0;i<nb.length;i++){
             nb[i].addEventListener("mouseover", ()=>{
                 nb[i].style.display = "hidden"
                 nb[i].style.color = "transparent"
@@ -103,7 +103,7 @@
         }
 
     const div = document.querySelector("div")
-    div.addEventListener("mouseover", () => {
+    div.addEventListener("mouseover", ()=>{
         let codigo = "<p onclick='cambiarH1()'>Hemos machacado el div</p>"
         codigo += "<p>Hasta pronto</p>"
         div.innerHTML = codigo
