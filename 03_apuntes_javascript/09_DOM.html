@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Soy el titulo principal</h1>
+    <h2>Soy el titulo secundario</h2>
+    <h3>Soy un h3</h3>
+    <p>1</p>
+    <p>2</p>
+    <p id="parafo_3">3</p>
+    <p class="newBackground">4</p>
+    <p class="newBackground">5</p>
+    <div>
+        <p>Soy un parrafo dentro del div</p>
+    </div>
+
+    <script>
+        let h1 = document.querySelector("h1")    //acceder al html *querySelector devuelve 1 unico valor, *querySelectorAll devuelve multiples valores
+                                        //si le pido que seleccione p seleccionara solo la 1a
+        console.log(h1);        //esto obtiene el h1 
+        console.log(h1.textContent); //para obtener SOLO el contenido
+        // h1.textContent = "He cambiado el titulo <span style='color:red'>principal</span>"  //para cambiar contenidos
+        h1.innerHTML = "He cambiado el titulo <span style='color:red'>principal</span>" //para inyectar html
+
+
+    </script>
+</body>
+</html>

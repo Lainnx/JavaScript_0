@@ -47,6 +47,7 @@ console.log(palabra.slice(-5)); //de -1 a -5, ultimos 5
 console.log(frase.split(" "));
 
 let array = []  //array vacía
+
 let nombre = "mAriA de LaS mercedeDes y dE TOdaS lAs SantAS"
 //paso 1: convertir todo en minusculas
 nombre=nombre.toLocaleLowerCase()   //pasar todo a minuscula
