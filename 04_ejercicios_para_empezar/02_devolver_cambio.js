@@ -4,7 +4,7 @@
 //El cambio se va a devolver en metalico segun esta condición: 
 //-será usando la minima cantidad de billetes y monedas posible
 
-let cambio = 457.28+0.001 //para corregir error javascript
+let cambio = 457.23+0.000001 //para corregir error javascript
 let cambioInicial = cambio
 // let numero = 4.567               //como division entera
 // console.log(parseInt(numero));  //trunca al 4 (coje el primer int que encuentra (antes del punto))
@@ -14,13 +14,14 @@ let objetoCambio = {}
 for(q of a){
     // console.log(q);
     if(cambio>=q){
-        let temp = parseInt(cambio/q)
+        let temp = parseInt(cambio/q)   //como division entera
         // console.log(temp,cambio ,q);
         console.log(`${temp} divisas de ${q}€`);
-        cambio = cambio -(temp*q)
-        objetoCambio[q]=temp
+        cambio = cambio -(temp*q)   //actualizar el cambio restando el numero de veces que cabe la divisa por el valor de la divisa
+        objetoCambio[q]=temp        //crea un objeto con todas las divisas que hay que devolver y el numero de ellas
     }
 }
+// console.log(objetoCambio);
 
 // console.log(Math.ceil(0.01999999 * 100)/100);
 // console.log(o);
