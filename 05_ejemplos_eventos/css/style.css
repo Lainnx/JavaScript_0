@@ -19,6 +19,14 @@ main section:nth-child(2){  /*el n hijo */
     background-color: darksalmon;
     /* height: 100px; */
     display: none;  /*para que no se muestre*/
+    width: 100%;
+    border: 3px solid darkred;
+    border-radius: 10px;
+    background-clip: padding-box;
+    padding: 10px;
+    div{
+        border: 0;  /*para quitar el borde que sale al hacer ps en el div*/
+    }
 }
 h2{
     font-size: 1.25rem;

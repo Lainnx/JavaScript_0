@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas de formularios</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main{
+        max-width: 80%;
+        margin: 5% auto;
+        }
+        div{
+            margin: 2rem 1rem;
+        }
+        button, input[type="button"]{
+            padding: 5px 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <main>
+        <h1>Etiquetas de formularios</h1>
+        <form action="#"></form>    <!--# pagina donde queremos que se manden los datos, placeholder-->
+
+        <fieldset>
+            <legend>Etiquetas más habituales</legend>
+            <div>
+                <label for="nombre">Nombre:</label>    <!--dentro del for id que corresponda-->
+                <input type="text" name="nombre" id="nombre"> <!--name->clave cuando se manda a la nube (si obj),-->    
+            </div>
+            <div>
+                <input type="button" value="Enviar" id="Enviar_1">    <!--aqui solo se puede poner texto, en button puedes poner cualquier cosa-->
+                <button type="button">Enviar</button> <!--hacen lo mismo, en button se pueden poner imagenes o iconos-->
+            </div>
+        </fieldset>
+    </main>
+
+    <script>
+
+        const enviar1 = document.getElementById("Enviar_1")
+
+    </script>
+</body>
+</html>
