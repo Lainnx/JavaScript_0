@@ -66,7 +66,7 @@ console.log(sumar4(3,2));
 //==============================================
 //Sistema 5
 
-let sumar5 = num1 => num1*num1   //con 1 solo parametro
+let sumar5 = num1 => num1*num1   //con 1 solo parametro, puede no llevar ()
 
 console.log(sumar5(3));
 
