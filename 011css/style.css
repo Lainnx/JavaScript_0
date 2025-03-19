@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    margin-top: 3rem;
+    text-align: center;
+}
+main{
+    max-width: 480px;
+    margin: 3rem auto;
+}
+fieldset{
+    margin: 1rem auto;
+    padding: 1rem;
+    /* border-radius: 10px para redondear bordes*/
+}
+input{
+    border-radius: 5px;
+    padding: .5rem;
+    text-align: left;
+}
+.personales{ 
+    input{
+        width: 100%;
+    }
+    div{
+        margin-top: 1rem;
+    }
+    p{  /*parrafo vacío para los errores, mejor darle propiedades aunque esté vacío*/
+        font-size: .8rem;
+        color: red;
+        height: 1.5rem;   /*para que no mueva el diseño cuando tenga valor despues*/
+    }
+}
+.reserva{
+    display: flex;
+    gap: .6rem;  /*para separarlos entre ellos*/
+    
+    div{
+        width: 100%;
+    }
+    input{
+        width: 100%;    /*para que ocupen toda la anchura siempre que puedan*/
+    }
+}
+input[type="radio"]{    /*seleccionar input por atributo*/
+    accent-color: darkgreen;    /*color circulito*/
+}
+input[type="radio"]:checked + label{    /*labels despues de input type radio*/
+    color: darkgreen;                   /*checked- el que tenga el cheked*/
+}
+input:focus{
+    background-color: #f2c564b4;
+}
+.botones{
+    display: flex;
+    justify-content: space-between;
+    button{
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    .reservar{
+    background-color: darkgreen;
+    color: white
+    }
+    .cancelar{
+        background-color: pink;
+    }
+}
+.reservar:hover, .cancelar:hover{    /*para as 2 clases a la vez*/
+    cursor: pointer;    /*para pasar de flecha a mano*/
+}
