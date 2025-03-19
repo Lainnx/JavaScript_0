@@ -83,8 +83,18 @@
                 </div>
             </form>
         </section>
+        <!-- Ventana emergente para el resumen de la reserva -->
         <section>
+            <dialog id="resumen" closedby="any">    <!--el dialog no aparece en pantalla hasta que lo llamemos-->
 
+                <h2>Resumen de la reserva</h2>
+                <div id="textoresumen"></div>
+                <form action="#" method="dialog">
+                    <div>
+                        <button id="cierraventana">Aceptar</button>
+                    </div>
+                </form>
+            </dialog>
         </section>
     </main>
     <script src="011js/script.js"></script>
