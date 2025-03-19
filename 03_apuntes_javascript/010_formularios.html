@@ -32,6 +32,10 @@
         input[type="radio"] + label{    /*para que el label no se muestre en block*/
             display: inline;
             margin-left: 1rem;
+            margin-right: 2rem;
+        }
+        fieldset{
+            margin: 2rem 0;
         }
 
     </style>
@@ -72,10 +76,10 @@
             </div>
             <div>
                 <input type="button" value="Enviar por Id" id="Enviar_1">    <!--aqui solo se puede poner texto, en button puedes poner cualquier cosa-->
-                <button type="submit">Enviar por form</button> <!--hacen lo mismo, en button se pueden poner imagenes o iconos, type submit en vez de button-->
+                <!-- <button type="submit">Enviar por form</button> hacen lo mismo, en button se pueden poner imagenes o iconos, type submit en vez de button -->
                 <div>
                     <h2>Buttons</h2>
-                    <button type="submit">Submit</button>
+                    <button type="submit">Enviar por form</button>
                     <button type="reset">Reset</button>
                 </div>
             </div>
@@ -93,10 +97,32 @@
 
         <fieldset>
             <legend>Radio buttons</legend>
-            <input type="radio" name="colores" id="rojo" checked> <label for="rojo">Color Rojo</label>  <!--checked - valor por defecto-->
-            <input type="radio" name="colores" id="azul"> <label for="azul">Color Azul</label>  <!--o uno u otro-->
-            <input type="radio" name="colores" id="verde"> <label for="verde">Color Verde</label>    <!--el name tiene que ser el mismo en los 3, asi sabe que tiene que elegir SOLO UNO-->
+            <input type="radio" name="colores" id="rojo" checked value="rojo"> <label for="rojo">Color Rojo</label>  <!--checked - valor por defecto-->
+            <input type="radio" name="colores" id="azul" value="azul"> <label for="azul">Color Azul</label>  <!--o uno u otro-->
+            <input type="radio" name="colores" id="verde" value="verde"> <label for="verde">Color Verde</label>    <!--el name tiene que ser el mismo en los 3, asi sabe que tiene que elegir SOLO UNO-->
 
+        </fieldset>
+
+        <fieldset>
+            <legend>Checkbox</legend>
+            <div>
+                <input type="checkbox" name="lectura" id="lectura">
+                <label for="lectura">He leído las condiciones ...</label>
+                <input type="checkbox" name="condiciones" id="condiciones">
+                <label for="condiciones">Acepto las condiciones</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Fechas</legend>
+            <div>
+                <label for="date">date</label>
+                <input type="date" name="date" id="date">   <!--para dias-->
+            </div>
+            <div>
+                <label for="datetime-local">datetime-local</label>
+                <input type="datetime-local" name="datetime-local" id="datetime-local"> <!--para dias y horas-->
+            </div>
         </fieldset>
 
         </form>
@@ -124,10 +150,10 @@
         myForm.addEventListener("submit",(event)=>{  //evento ya no click sino submit, boton tmbn type submit
             // alert(myForm["nombre"].value)
             event.preventDefault()  //para que no se borren los datos (no se recargue la pagina) despues del submit
-            resultadoFormulario.textContent += myForm["nombre"].value + " "//estamos encadenando texto, para que no queden pegados
-            resultadoFormulario.textContent += myForm["password"].value + " "
+            resultadoFormulario.textContent += myForm["nombre"].value + " "//estamos encadenando texto, " "para que no queden pegados
+            resultadoFormulario.textContent += myForm["password"].value + " "   //como diccionarios en py, IMPORTANTE MISMOS NOMBRES(atributo NAME) QUE ARRIBA (EN INPUT)
             resultadoFormulario.textContent += myForm["number"].value + " "
-
+            alert.myForm["colores"].value
         })
 
     </script>
