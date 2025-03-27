@@ -11,12 +11,13 @@ formCiudad.addEventListener("submit",(e)=>{
     const idioma = "es"
 
     let url = `https://api.openweathermap.org/data/2.5/weather?appid=${appid}&units=metric&lang=${idioma}&q=${ciudad}`
-  
-   
+    
     const divDatos = document.getElementById("divDatos")
     
     fetch(url)
     .then(data=>data.json())  //pedimos que el data lo pase a json
+    // .then(data=>console.log(data))
+
     .then(data=>{
         divDatos.innerHTML=""
         divDatos.innerHTML += `<p>Ciudad: ${data.name}</p>`
@@ -27,12 +28,6 @@ formCiudad.addEventListener("submit",(e)=>{
     
     })
 })
-
-
-
-
-
-
 
 
 
