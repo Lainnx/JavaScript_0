@@ -3,6 +3,7 @@ import key from "./key.js"
 const today = new Date()
 let prevision = false
 const formCiudad = document.forms["formCiudad"]
+// let datos = []
 
 const togglePrevision = document.getElementById("togglePrevision")
 
@@ -68,16 +69,26 @@ formCiudad.addEventListener("submit",(e)=>{
         divDatos.innerHTML+=`<p>Descripción: ${data["list"][index]["weather"][0]["description"]}</p>`//dentro de weather, luego pos 0(es un array), elemento "descripcion"
         divDatos.innerHTML+=`<div><img src="https://www.imelcf.gob.pa/wp-content/plugins/location-weather/assets/images/icons/weather-icons/${data["list"][index]["weather"][0]["icon"]}.svg"></div>`
         divDatos.style.borderBottom="solid #0000FF"
-    
+        divDatos.style.borderTop="solid #0000FF"
+        
+        // divDatos.addEventListener("click",()=>{
+        //     alert(`test${test}`)
+        // })
+
+
+ 
+
         for(let j=0;j<data["list"].length;j++){
             if(j%8==0){
                 const div = document.createElement("div")
                 div.classList.add("prevision")
                 div.innerHTML+=`<p>Temperatura ${data["list"][j]["dt_txt"]}: ${data["list"][j]["main"]["temp"]}ºC</p>`
                 div.innerHTML+=`<p>Descripción: ${data["list"][j]["weather"][0]["description"]}</p>`//dentro de weather, luego pos 0(es un array), elemento "descripcion"
-                div.innerHTML+=`<div><img src="https://www.imelcf.gob.pa/wp-content/plugins/location-weather/assets/images/icons/weather-icons/${data["list"][j]["weather"][0]["icon"]}.svg"></div>`
+                div.innerHTML+=`<img src="https://www.imelcf.gob.pa/wp-content/plugins/location-weather/assets/images/icons/weather-icons/${data["list"][j]["weather"][0]["icon"]}.svg">`
                 div.style.borderBottom="solid #0000FF";
                 div.style.display="none";
+                // datos.push([data["list"]["main"][j]["humidity"],data["main"]["temp_max"],data["main"]["temp_min"],data["wind"]["speed"],data["wind"]["deg"],data["weather"]["main"],data["weather"]["description"],data["weather"]["icon"]])
+                // console.log(datos);
                 document.body.appendChild(div)
             }
         }
